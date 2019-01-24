@@ -1,3 +1,5 @@
+# ======================================================================
+# 17.27
 # Get the meta data
 data0 = read.table('CH16PR09.txt')
 
@@ -10,6 +12,7 @@ qt
 #a
 # Write a function to get the precision conveniently
 my_precision = function(a,m,n,t){
+    # t is the multiplier of the n in the sample size of average group
     s0 = 4.5
     b = qt(1-a/2*m,(2+t)*n-3)
     s = sqrt(((t+1)/(t*n))*s0^2)
@@ -22,16 +25,29 @@ my_precision(0.1,2,10,t=2)
 # n should be between 8 and 9, closer to 9, since n should be an integer, so n=8
 
 #b
+# when t==1
 my_precision(0.1,2,8,t=1)
 my_precision(0.1,2,9,t=1)
 my_precision(0.1,2,10,t=1)
 my_precision(0.1,2,11,t=1)
 # n should be 11
 
-#c
+# when t == 3
 my_precision(0.1,2,11,t=3)
 my_precision(0.1,2,8,t=3)
 my_precision(0.1,2,7,t=3)
 my_precision(0.1,2,6,t=3)
 # n should be 7
+# ============================================================================
 
+# 18.6
+# Get all the estimate and write them in the data frame:
+data1 = data0
+data1$fit = 0
+c = tapply(data1$days,data1$level,mean)
+data1$fit[which(data1$level==1)] = c[1]
+data1$fit[which(data1$level==2)] = c[2]
+data1$fit[which(data1$level==3)] = c[3]
+data1$res = data1$days -data1$fit
+data1$level = as.numeric(data1$level)
+plot(data1$level,data1$res, col = data1$level)
