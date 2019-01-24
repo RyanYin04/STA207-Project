@@ -1,0 +1,18 @@
+# Get the meta data
+data0 = read.table('CH16PR09.txt')
+
+# Initialize the data
+names(data0) = c('days','level','observation_numer')
+head(data0)
+sapply(data0, typeof)
+data0$level = as.factor(data0$level)
+qt
+#a
+my_precision = function(a,m,n){
+    s0 = 4.5
+    b = qt(1-a/2*m,4*n-3)
+    s = sqrt(3/(2*n)*s0^2)
+    M = b*s
+    M
+}
+my_precision(0.1,2,10)
