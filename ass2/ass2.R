@@ -1,3 +1,5 @@
+library(MASS)
+library(ggplot2)
 # ======================================================================
 # 17.27
 # Get the meta data
@@ -51,3 +53,23 @@ data1$fit[which(data1$level==3)] = c[3]
 data1$res = data1$days -data1$fit
 data1$level = as.numeric(data1$level)
 plot(data1$level,data1$res, col = data1$level)
+
+mse = sum(data1$res^2)/(length(data1$days)-3)
+mse
+
+pnorm(-2.111,mean =0, sd=1)
+
+sorted = sort(data1$res/sqrt(mse))
+my_qnorm = function(x){
+    temp = c()
+    for (i in 1:length(x)){
+        temp[i] = pnorm(x[i], mean = 0, sd=1)
+    }
+    return(temp)
+}
+
+temp1 = my_qnorm(sorted)
+cor(temp1,sorted)
+plot(data1$observation_numer, data1$res, col = data1$level)
+ggplot(data = data1, aes(x = observation_numer, y = res))+geom_point()+facet_grid(level~.)
+
