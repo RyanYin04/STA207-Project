@@ -73,3 +73,7 @@ cor(temp1,sorted)
 plot(data1$observation_numer, data1$res, col = data1$level)
 ggplot(data = data1, aes(x = observation_numer, y = res))+geom_point()+facet_grid(level~.)
 
+#==============================================================================
+
+
+#18.17
