@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1549951328863.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "CF04488D",
+    "lastKnownWriteTime" : 3419473789575321445,
+    "last_content_update" : 1549951328863,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "FAEF6E8F",
+        "caption" : "kid_incomp",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=kid_incomp&cache_key=FAEF6E8F",
+        "displayedObservations" : "50",
+        "environment" : "",
+        "object" : "kid_incomp",
+        "preview" : "0",
+        "totalObservations" : "50",
+        "variables" : "5"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

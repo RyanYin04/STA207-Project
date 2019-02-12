@@ -1,0 +1,33 @@
+kidney = read.csv('Data19.18.csv')
+kidney
+diet = read.csv('Data21,7.csv')
+diet
+
+
+#23.13
+kid_incomp = kidney[-which(kidney$Duration == 2& kidney$Weight.Gain == 1),]
+kid_incomp$log_y = log10(kid_incomp$ï..Y+1)
+kid_incomp$Weight.Gain = factor(kid_incomp$Weight.Gain)
+kid_incomp$Duration = factor(kid_incomp$Duration)
+fit1 = aov(log_y~Duration+Weight.Gain,data = kid_incomp)
+summary(fit1)
+fit2 = aov(log_y~Weight.Gain,data = kid_incomp)
+summary(fit2)
+qf(0.95,2,46)
+
+# 23.19
+diet = diet[-3,]
+diet = diet[-13,]
+diet
+diet$Block = factor(diet$Block)
+diet$Fat = factor(diet$Fat)
+fit3 = aov(Lipid~Block+Fat,data = diet)
+anova(fit3)
+
+diet$fit = fit3$fitted.values
+mu = tapply(diet$fit,diet$Fat, mean)
+mu
+?TukeyHSD
+a = TukeyHSD(fit3,conf.level = 0.98)
+plot(a)
+ptukey(0.98,nmeans = )
