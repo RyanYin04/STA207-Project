@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1550892313832.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2393389592",
+    "id" : "EDAB3CEA",
+    "lastKnownWriteTime" : 1551482307,
+    "last_content_update" : 1551482307093,
+    "path" : "~/R/Project/STA 207/ass5/ass5.Rmd",
+    "project_path" : "ass5.Rmd",
+    "properties" : {
+        "cursorPosition" : "39,0",
+        "scrollLine" : "35",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

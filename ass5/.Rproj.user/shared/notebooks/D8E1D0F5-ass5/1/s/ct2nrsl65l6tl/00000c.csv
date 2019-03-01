@@ -1,0 +1,3 @@
+"0","aov3 = aov(data = data_3, Acid~factor(Plant)*factor(Leaf))"
+"0","data_3$fit = aov3$fitted.values"
+"0","plot(aov3$residuals~aov3$fitted.values)"

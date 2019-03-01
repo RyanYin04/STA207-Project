@@ -1,0 +1,3 @@
+"0","res2 = aov2$residuals"
+"0","fit2 = aov2$fitted.values"
+"0","plot(res2~fit2)"

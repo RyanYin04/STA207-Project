@@ -1,0 +1,4 @@
+"0","library(ggplot2)"
+"0","#PROBLEM 26.4"
+"0","data_2 = read.csv('Data26.4.csv')"
+"0","data_2"
