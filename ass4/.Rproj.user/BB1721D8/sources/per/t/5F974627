@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1549944514737.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2023468815",
+    "id" : "5F974627",
+    "lastKnownWriteTime" : 1550009975,
+    "last_content_update" : 1550009975078,
+    "path" : "~/R/Project/STA 207/ass4/ass4.R",
+    "project_path" : "ass4.R",
+    "properties" : {
+        "cursorPosition" : "49,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

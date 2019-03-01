@@ -1,3 +1,6 @@
+library(MASS)
+
+
 kidney = read.csv('Data19.18.csv')
 kidney
 diet = read.csv('Data21,7.csv')
@@ -30,4 +33,39 @@ mu
 ?TukeyHSD
 a = TukeyHSD(fit3,conf.level = 0.98)
 plot(a)
-ptukey(0.98,nmeans = )
+
+
+
+
+
+#24.12
+data3 = read.csv('Data24.12.csv')
+data3$A = factor(data3$A)
+data3$B = factor(data3$B)
+data3$C = factor(data3$C)
+fit4  = aov(Y~A+B+C, data = data3)
+data3$fit = fit4$fitted.values
+data3$res = fit4$residuals
+anova(fit4)
+mse = 777
+fit4  = aov(Y~A+C+B, data = data3)
+
+
+res_sd = (fit4$residuals-mean(fit4$residuals))/sd(fit4$residuals)
+res_sort = sort(res_sd)
+
+t = c()
+n = length(res_sd)
+for (i in seq(1,n-1)) {
+    t[i] =  qnorm(i/n, mean = 0,sd = 1)
+}
+seq(1,n-1)
+t
+cor(res_sort[1:59],t)
+plot(fit4,which=2)
+boxcox(fit4)
+?qnorm
+
+
+fit5 = aov(Y~A*B*C, data = data3)
+summary(fit5)
